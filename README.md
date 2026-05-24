@@ -12,10 +12,10 @@ Zyntra Air is a portfolio airline booking system with a modern design and seamle
 
 ## Tech Stack
 
-- HTML  
+- HTML5  
 - CSS  
 - JavaScript  
-
+- Node.js
 ## Screenshots
 
 Home Page
