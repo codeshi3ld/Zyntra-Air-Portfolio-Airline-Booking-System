@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flight booking website">
+    <meta name="keywords" content="flight, travel, book, explore, vacation">
+    <meta name="author" content="Your Name">
+    <title>Flight Booking</title>
+
+    <!-- ================= STYLESHEETS ================= -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="experience.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-left">
+        <!-- EARTH ICON -->
+        <span class="earth-icon">🌍</span> 
+
+        <!-- NAVIGATION LINKS -->
+        <nav class="nav-links">
+            <a href="home.html">Explore</a>
+            <a href="manage.html">Manage</a>
+
+            <!-- ================= EXPERIENCE MEGA DROPDOWN ================= -->
+            <div class="mega-dropdown">
+                <a href="#" class="mega-btn">Experience</a>
+                <div class="mega-menu" id="megaMenu">
+                    <div class="mega-container">
+                        <!-- CLOSE BUTTON -->
+                        <span class="close-btn" onclick="closeMega()">✖</span>
+
+                        <!-- COLUMN 1: EXPERIENCE -->
+                        <div class="mega-column">
+                            <h4>EXPERIENCE</h4>
+                            <a href="https://www.getyourguide.com/">Passenger Journey</a>
+                            <a href="https://luxuryescapes.com/ph">EliteRide</a>
+                        </div>
+
+                        <!-- COLUMN 2: LOUNGES -->
+                        <div class="mega-column">
+                            <h4>LOUNGES</h4>
+                            <a href="https://loungereview.com/">Business Class Lounge</a>
+                            <a href="https://www.changiairport.com/">Worldwide Lounges</a>
+                        </div>
+
+                        <!-- COLUMN 3: SHOP -->
+                        <div class="mega-column">
+                            <h4>SHOP</h4>
+                            <a href="https://shop.dutyfree.gov.ph/">Duty Free</a>
+                            <a href="https://www.hudsongroup.com/">Official Store</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ================= END EXPERIENCE MEGA DROPDOWN ================= -->
+
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+
+    <!-- NAV RIGHT SECTION -->
+    <div class="nav-right">
+        <a href="#">Help</a>
+        <a href="#">Log in</a>
+        <a href="#" class="signup">Sign up</a>
+    </div>
+
+    <!-- HAMBURGER MENU BUTTON -->
+    <div id="hamburger" class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</header>
+
+</header>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="about-section">
+
+    <!-- ROW 1 -->
+    <div class="about-row">
+        <div class="about-image">
+            <img src="departures.jpg" alt="Booking System">
+        </div>
+        <div class="about-text">
+            <h2>About Flight Booking</h2>
+            <p>
+                Flight Booking is a reliable travel solutions platform dedicated to providing smooth, efficient, and secure flight booking services for individuals, families, and corporate clients worldwide. We aim to make travel planning simple, convenient, and stress-free.
+
+                Our advanced booking system allows customers to search, compare, and reserve flights quickly with real-time information, competitive fares, transparent pricing, and instant confirmations. We work with trusted airline partners to ensure flexible and dependable travel options for both domestic and international destinations.
+
+                Security and reliability are our top priorities. We use secure payment gateways and strong data protection systems to keep customer information safe while delivering fast and accurate booking services.
+
+                Customer satisfaction is at the heart of what we do. Our dedicated support team is ready to assist with inquiries, booking changes, and travel concerns to ensure a smooth journey from start to finish.
+
+                At Flight Booking, we combine innovation, convenience, and excellent service to make every trip simple, safe, and rewarding.
+            </p>
+        </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="about-row reverse">
+        <div class="about-image">
+            <img src="depart.jpg" alt="Travel Experience">
+        </div>
+        <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>
+              Our mission is to make travel simple, accessible, and stress-free for everyone. We believe that every journey should begin with confidence and convenience, not confusion or uncertainty. That is why we are committed to providing efficient, reliable, and user-friendly flight booking solutions.
+
+              Through modern technology and innovative systems, we offer real-time information, seamless navigation, and fast, secure transactions. Our platform allows travelers to search, compare, and confirm flights with ease, ensuring transparency, competitive pricing, and accurate booking details at every step.
+
+              We are dedicated to maintaining high standards of speed, security, and service excellence. Beyond technology, we focus on customer satisfaction by delivering responsive support and continuously improving our services based on feedback and evolving travel trends.
+
+              Driven by innovation and integrity, our goal is to become a trusted travel partner for individuals, families, and businesses—providing a smooth, efficient, and dependable flight booking experience every time.
+            </p>
+        </div>
+    </div>
+
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <!-- FOOTER COLUMN 1 -->
+    <div class="footer-column">
+        <h4>Air Horizon</h4>
+        <a href="#">Our Identity</a>
+        <a href="#">Careers & Opportunities</a>
+        <a href="#">Media Center</a>
+        <a href="#">Community Engagement</a>
+        <a href="#">National Talent Pathway</a>
+        <a href="#">Corporate Publications</a>
+        <a href="#">Sustainability Vision</a>
+    </div>
+
+    <!-- FOOTER COLUMN 2 -->
+    <div class="footer-column">
+        <h4>Horizon Network</h4>
+        <a href="#">Gateway Operations</a>
+        <a href="#">Executive Aviation Services</a>
+        <a href="#">Retail & Travel Ventures</a>
+        <a href="#">Cargo & Logistics Division</a>
+        <a href="#">Media & Communications Unit</a>
+        <a href="#">Aviation Design Studio</a>
+        <a href="#">All Affiliates</a>
+    </div>
+
+    <!-- FOOTER COLUMN 3 -->
+    <div class="footer-column">
+        <h4>Enterprise Solutions</h4>
+        <a href="#">Corporate Flight Programs</a>
+        <a href="#">Premium Business Services</a>
+        <a href="#">Conferences & Event Aviation</a>
+        <a href="#">Brand Collaboration</a>
+    </div>
+
+    <!-- FOOTER COLUMN 4 -->
+    <div class="footer-column">
+        <h4>Strategic Partnerships</h4>
+        <a href="#">Affiliate Program</a>
+        <a href="#">Supplier Portal & Accreditation</a>
+        <a href="#">Global Trade Partners</a>
+    </div>
+
+
+    <!-- FOOTER COLUMN 5 -->
+    <div class="footer-column">
+        <h4>Help</h4>
+        <a href="#">Contact us</a>
+        <a href="#">Browse FAQs</a>
+        <a href="#">Travel alerts</a>
+    </div>
+
+    <!-- FOOTER COLUMN 6 -->
+    <div class="footer-column">
+        <!-- SOCIAL MEDIA LINKS -->
+        <div class="social-media">
+         <a href="https://www.facebook.com/">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://x.com/">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.linkedin.com/feed/">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://www.youtube.com/">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+        </div>
+
+        <!-- COOKIE AND LEGAL INFO -->
+        <div class="cookie-consent">
+            <p>Cookie policy | Legal | Privacy | Accessibility | Combating human trafficking | Sitemap | Cookie Consent</p>
+        </div>
+    </div>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</body>
+</html>

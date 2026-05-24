@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flight booking website">
+    <meta name="keywords" content="flight, travel, book, explore, vacation">
+    <meta name="author" content="Your Name">
+    <title>Flight Booking</title>
+
+    <!-- ================= STYLESHEETS ================= -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="experience.css">
+    
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-left">
+        <!-- EARTH ICON -->
+        <span class="earth-icon">🌍</span> 
+
+        <!-- NAVIGATION LINKS -->
+        <nav class="nav-links">
+            <a href="home.html">Explore</a>
+            <a href="manage.html">Manage</a>
+            
+
+            <!-- ================= EXPERIENCE MEGA DROPDOWN ================= -->
+            <div class="mega-dropdown">
+                <a href="#" class="mega-btn">Experience</a>
+
+                <div class="mega-menu" id="megaMenu">
+                    <div class="mega-container">
+
+                        <!-- CLOSE BUTTON -->
+                        <span class="close-btn" onclick="closeMega()">✖</span>
+
+                        <!-- COLUMN 1: EXPERIENCE -->
+                        <div class="mega-column">
+                            <h4>EXPERIENCE</h4>
+                            <a href="https://www.getyourguide.com/">Passenger Journey</a>
+                            <a href="https://luxuryescapes.com/ph">EliteRide</a>
+                        </div>
+
+                        <!-- COLUMN 2: LOUNGES -->
+                        <div class="mega-column">
+                            <h4>LOUNGES</h4>
+                            <a href="https://loungereview.com/">Business Class Lounge</a>
+                            <a href="https://www.changiairport.com/">Worldwide Lounges</a>
+                        </div>
+
+                        <!-- COLUMN 3: SHOP -->
+                        <div class="mega-column">
+                            <h4>SHOP</h4>
+                            <a href="https://shop.dutyfree.gov.ph/">Duty Free</a>
+                            <a href="https://www.hudsongroup.com/">Official Store</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ================= END EXPERIENCE MEGA DROPDOWN ================= -->
+
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+
+    <!-- NAV RIGHT SECTION -->
+    <div class="nav-right">
+        <a href="#">Help</a>
+        <a href="#">Log in</a>
+        <a href="#" class="signup">Sign up</a>
+    </div>
+
+    <!-- HAMBURGER MENU BUTTON -->
+    <div id="hamburger" class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<div class="homehero">
+    <h1 id="text">Explore the World</h1>
+</div>
+
+<!-- ================= BOOKING SECTION ================= -->
+<div class="booking-container">
+    <div class="booking-box">
+
+        <!-- TRIP TYPE SELECTION -->
+        <div class="trip-type">
+            <label><input type="radio" name="trip" id="returnTrip" checked> Return</label>
+            <label><input type="radio" name="trip" id="oneWay"> One way</label>
+            <label><input type="radio" name="trip" id="multiCity"> Multi-city</label>
+        </div>
+
+        <!-- FLIGHT INPUTS -->
+        <div class="form-row">
+            <input list="countries" id="from" placeholder="From" autocomplete="off">
+            <input list="countries" id="to" placeholder="To" autocomplete="off">
+
+            <input type="date" id="departDate">
+            <input type="date" id="returnDate">
+
+            <select>
+                <option>1 Passenger Economy</option>
+                <option>Business Class</option>
+                <option>First Class</option>
+            </select>
+        </div>
+
+        <!-- ✅ FIRST FLIGHT ERROR -->
+        <div id="flightError" class="flight-error" style="display:none;"></div>
+
+        <!-- EXTRA FLIGHT (Multi-city) -->
+        <div class="form-row" id="multiCitySection" style="display:none; margin-top:10px;">
+            <input list="countries" id="from2" placeholder="From (2nd Flight)">
+            <input list="countries" id="to2" placeholder="To (2nd Flight)">
+            <input type="date" id="date2">
+        </div>
+
+        <!-- ✅ SECOND FLIGHT ERROR -->
+        <div id="multiError" class="flight-error" style="display:none;"></div>
+
+        <!-- ✅ SEARCH BUTTON (MOVED BELOW) -->
+        <div class="search-btn-wrapper">
+            <button type="button" class="search-btn" id="searchBtn">
+                Search Flights
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+                        <!-- ================= FLIGHT BOOKING API SAMPLE ================= -->
+
+                        <!--
+                        Currently, the flight booking form uses static input fields for demonstration.
+                        The country list above is a sample and does not represent real airport data.
+
+                        In a real-world flight booking system, flight results should be retrieved
+                        from a flight data API using JavaScript (see script.js).
+
+                        Example Flight API Providers:
+                        - Amadeus Flight API
+                        - Skyscanner API
+                        - Travelport API
+                        - AviationStack API
+
+                        
+                        NOTE:
+                        - Actual flight API requests require a valid API key.
+                        - Do NOT include API keys directly in HTML or frontend JavaScript for production.
+                          This could expose your key to the public.
+                        - Always use a backend server (Node.js, PHP, Python, etc.) to securely handle API calls.
+                        - The country list provided above is for demonstration purposes only.
+                          It is a static sample and does not represent real-time airport or flight data.
+                        -->
+
+
+<!-- COUNTRY LIST -->
+<datalist id="countries">
+    <option value="Philippines">
+    <option value="Japan">
+    <option value="United States">
+    <option value="Singapore">
+    <option value="South Korea">
+    <option value="Canada">
+    <option value="Australia">
+</datalist>
+
+</div>
+</div>
+    
+
+<!-- ================= HIGHLIGHT BOX ================= -->
+<div class="highlight-box">
+    <h1>Travel far, experience more.</h1>
+    <p>Go beyond the horizon, discover more. Explore new places, create unforgettable memories.</p>
+</div>
+
+<!-- ================= PROFILE CONTAINER ================= -->
+<div class="profile-container">
+    <img src="norway places.jpg" alt="Profile 1" class="profile-img">
+    <img src="london.jpg" alt="Profile 2" class="profile-img">
+    <img src="ny.jpg" alt="Profile 3" class="profile-img">
+    <img src="egypt.jpg" alt="Profile 4" class="profile-img">
+    <img src="niagara.jpg" alt="Profile 5" class="profile-img">
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <!-- FOOTER COLUMN 1 -->
+    <div class="footer-column">
+        <h4>Air Horizon</h4>
+        <a href="#">Our Identity</a>
+        <a href="#">Careers & Opportunities</a>
+        <a href="#">Media Center</a>
+        <a href="#">Community Engagement</a>
+        <a href="#">National Talent Pathway</a>
+        <a href="#">Corporate Publications</a>
+        <a href="#">Sustainability Vision</a>
+    </div>
+
+    <!-- FOOTER COLUMN 2 -->
+    <div class="footer-column">
+        <h4>Horizon Network</h4>
+        <a href="#">Gateway Operations</a>
+        <a href="#">Executive Aviation Services</a>
+        <a href="#">Retail & Travel Ventures</a>
+        <a href="#">Cargo & Logistics Division</a>
+        <a href="#">Media & Communications Unit</a>
+        <a href="#">Aviation Design Studio</a>
+        <a href="#">All Affiliates</a>
+    </div>
+
+    <!-- FOOTER COLUMN 3 -->
+    <div class="footer-column">
+        <h4>Enterprise Solutions</h4>
+        <a href="#">Corporate Flight Programs</a>
+        <a href="#">Premium Business Services</a>
+        <a href="#">Conferences & Event Aviation</a>
+        <a href="#">Brand Collaboration</a>
+    </div>
+
+    <!-- FOOTER COLUMN 4 -->
+    <div class="footer-column">
+        <h4>Strategic Partnerships</h4>
+        <a href="#">Affiliate Program</a>
+        <a href="#">Supplier Portal & Accreditation</a>
+        <a href="#">Global Trade Partners</a>
+    </div>
+
+
+    <!-- FOOTER COLUMN 5 -->
+    <div class="footer-column">
+        <h4>Help</h4>
+        <a href="#">Contact us</a>
+        <a href="#">Browse FAQs</a>
+        <a href="#">Travel alerts</a>
+    </div>
+
+    <!-- FOOTER COLUMN 6 -->
+    <div class="footer-column">
+        <!-- SOCIAL MEDIA LINKS -->
+        <div class="social-media">
+         <a href="https://www.facebook.com/">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://x.com/">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.linkedin.com/feed/">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://www.youtube.com/">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+        </div>
+
+        <!-- COOKIE AND LEGAL INFO -->
+        <div class="cookie-consent">
+            <p>Cookie policy | Legal | Privacy | Accessibility | Combating human trafficking | Sitemap | Cookie Consent</p>
+        </div>
+    </div>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</body>
+</html>
+
+
+

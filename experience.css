@@ -1,0 +1,133 @@
+/* ================= MEGA DROPDOWN ================= */
+
+.mega-dropdown {
+    position: relative;
+}
+
+.mega-btn {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Mega menu container */
+.mega-menu {
+    position: fixed;        /* para dili siya mag base sa nav link */
+    top: 80px;              /* adjust depende sa height sa navbar */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #f3f3f3;
+    padding: 50px 0;
+    display: none;
+    z-index: 9999;
+}
+
+/* Close button style - ADD THIS */
+.close-btn {
+    position: absolute;
+    top: 15px;        /* pwede nimo i-adjust */
+    right: 20px;      /* pwede nimo i-adjust */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    z-index: 10000;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+
+.close-btn:hover {
+    color: #0ff;
+}
+
+/* Inner container para centered ang sulod */
+.mega-menu .mega-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+/* Column styling */
+.mega-column h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.mega-column a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.mega-column a:hover {
+    color: #0ff;
+}
+
+/* SHOW ON HOVER */
+.mega-dropdown:hover .mega-menu {
+    display: grid;
+}
+
+
+/* ================== RESPONSIVE MEGA MENU ================== */
+
+/* Tablet view (768px - 1024px) */
+@media (max-width: 1024px) {
+    .mega-menu .mega-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+        gap: 40px; /* slightly smaller gap */
+        padding: 30px 0;
+    }
+
+    .mega-menu {
+        top: 70px; /* adjust based on navbar height */
+        padding: 40px 0;
+    }
+
+    .mega-column a {
+        font-size: 14px;
+    }
+}
+
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+    .mega-menu .mega-container {
+        grid-template-columns: 1fr; /* single column for mobile */
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .mega-menu {
+        top: 60px; /* adjust navbar height for mobile */
+        padding: 30px 0;
+    }
+
+    .mega-column h4 {
+        font-size: 16px;
+    }
+
+    .mega-column a {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+
+    /* Optional: make close button bigger for touch */
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+    }
+
+}
